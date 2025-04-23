@@ -42,7 +42,7 @@ bool isEndOfSentence(char c) {
 }
 
 void speakAnswer(String answer) {
-    const int chunkSize = 25;
+    const int chunkSize = 93;
     int len = answer.length();
     int start = 0;
     String nextChunk;
