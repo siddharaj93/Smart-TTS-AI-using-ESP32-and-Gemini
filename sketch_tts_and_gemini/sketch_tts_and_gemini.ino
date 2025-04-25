@@ -26,9 +26,9 @@ void speakAnswer(String answer);
 void audio_info(const char *info);
 bool isEndOfSentence(char c);
 
-const char* ssid = "Your_WiFi_SSID";//Enter Your WiFi SSID
-const char* password = "Your_WiFi_Password";//Enter Your WiFi Password
-const char* gemini_api_key = "Your_Gemini_API_Key";//Get your Gemini API key at - https://aistudio.google.com/app/apikey (hold the ctrl key and clik the link)
+const char* ssid = "Airtel_9359531817";//Enter Your WiFi SSID
+const char* password = "samir0811";//Enter Your WiFi Password
+const char* gemini_api_key = "AIzaSyD-PdW5wxoO7wCl6DKakc0NGVy6Av3swjg";//Get your Gemini API key at - https://aistudio.google.com/app/apikey (hold the ctrl key and clik the link)
 String Question = "";
 
 #define I2S_DOUT      25
@@ -42,7 +42,7 @@ bool isEndOfSentence(char c) {
 }
 
 void speakAnswer(String answer) {
-    const int chunkSize = 93;
+    const int chunkSize = 50;
     int len = answer.length();
     int start = 0;
     String nextChunk;
@@ -67,7 +67,7 @@ void speakAnswer(String answer) {
             }
         }
         
-        audio.connecttospeech(chunk.c_str(), "en");//It plays the Response from the Woofer/Speaker
+        audio.connecttospeech(chunk.c_str(), "en-GB");//It plays the Response from the Woofer/Speaker
         while(audio.isRunning()) {
             audio.loop();
         }
@@ -88,7 +88,6 @@ void setup() {
     Serial.println(ssid);
     
     while (WiFi.status() != WL_CONNECTED) {
-        delay(1000);
         Serial.print(".");
     }
     Serial.println("connected");
@@ -96,9 +95,8 @@ void setup() {
     Serial.println(WiFi.localIP());
     
     audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-    audio.setVolume(85);//can be set according to your liking
-    audio.setTone(0, 0, 0);
-    audio.forceMono(true);
+    audio.setVolume(100);//can be set according to your liking
+   
 }
 
 void loop() {
@@ -173,3 +171,4 @@ void audio_info(const char *info) {
     Serial.print("audio_info: ");
     Serial.println(info);
 }
+
