@@ -67,7 +67,7 @@ void speakAnswer(String answer) {
             }
         }
         
-        audio.connecttospeech(chunk.c_str(), "en-GB");//It plays the Response from the Woofer/Speaker
+        audio.connecttospeech(chunk.c_str(), "en-GB");//It plays the Response from the Woofer/Speaker, here I am using British English you can use other versions such as en-IN(Indian English),en-US(English of the United States)
         while(audio.isRunning()) {
             audio.loop();
         }
