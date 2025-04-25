@@ -26,9 +26,9 @@ void speakAnswer(String answer);
 void audio_info(const char *info);
 bool isEndOfSentence(char c);
 
-const char* ssid = "Airtel_9359531817";//Enter Your WiFi SSID
-const char* password = "samir0811";//Enter Your WiFi Password
-const char* gemini_api_key = "AIzaSyD-PdW5wxoO7wCl6DKakc0NGVy6Av3swjg";//Get your Gemini API key at - https://aistudio.google.com/app/apikey (hold the ctrl key and clik the link)
+const char* ssid = "Your_WiFi_SSID";//Enter Your WiFi SSID
+const char* password = "Your_WiFi_Password";//Enter Your WiFi Password
+const char* gemini_api_key = "Your_Gemini_API_Key";//Get your Gemini API key at - https://aistudio.google.com/app/apikey (hold the ctrl key and clik the link)
 String Question = "";
 
 #define I2S_DOUT      25
