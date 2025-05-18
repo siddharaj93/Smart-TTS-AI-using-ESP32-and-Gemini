@@ -18,7 +18,7 @@ Note:Use a 4 ohm 3 watt woffer/speaker
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
-#include "Audio.h"//Download the library from - https://github.com/schreibfaul1/ESP32-audioI2S/blob/master/src/Audio.h (hold the ctrl key and clik the link)
+#include "Audio.h"//Download the library from - https://github.com/schreibfaul1/ESP32-audioI2S/blob/master/src/Audio.h (hold the ctrl key and clik the link in Arduino IDE)
 
 void setup();
 void loop();
@@ -28,7 +28,7 @@ bool isEndOfSentence(char c);
 
 const char* ssid = "Your_WiFi_SSID";//Enter Your WiFi SSID
 const char* password = "Your_WiFi_Password";//Enter Your WiFi Password
-const char* gemini_api_key = "Your_Gemini_API_Key";//Get your Gemini API key at - https://aistudio.google.com/app/apikey (hold the ctrl key and clik the link)
+const char* gemini_api_key = "Your_Gemini_API_Key";//Get your Gemini API key at - https://aistudio.google.com/app/apikey (hold the ctrl key and clik the link in Arduino IDE)
 String Question = "";
 
 #define I2S_DOUT      25
